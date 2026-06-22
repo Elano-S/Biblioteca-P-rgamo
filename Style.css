@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5f0e8;
+    color:#2c241c;
+}
+html{
+    scroll-behavior:smooth;
+}
+/* HEADER */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:#1c3050;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 1%;
+    z-index: 1000;
+}
+.logo-area{ display:flex; align-items:center; gap:15px; }
+
+.logo-area img{
+    width:70px;
+}
+
+.logo-area h1{
+    font-family:'Cinzel', serif;
+    letter-spacing:2px;
+}
+
+.logo-area p{
+    color:#b8860b;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:5px 10px;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:5px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#b8860b;
+    color:#faf8f2;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(
+        rgba(28,48,80,.88),
+        rgba(28,48,80,.88)
+    ),
+    url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+    color:white;
+
+    position:relative;
+
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.hero-content span{
+    color:#b8860b;
+
+}
+
+.hero h2{
+    font-size:3.5rem;
+    margin-bottom:20px;
+    font-family:'Cinzel', serif;
+}
+
+.hero p{
+    margin-bottom:30px;
+    font-size:1.1rem;
+    line-height:1.6;
+}
+.hero -buttons{
+    display:flex;
+    gap:15px;
+}
+.hero button{
+    background:#b8860b;
+    border:none;
+    color:#faf8f2;
+    padding:15px 30px;
+    font-size:1rem;
+    cursor:pointer;
+    border-radius:5px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero button:hover{
+    background:#c99716;
+    transform:scale(1.05);
+}
+
+.btn-secondary{
+    background:transparent !important;
+    border:2px solid #b8860b !important;
+    color:white;
+}
+.btn-secondary:hover{
+    box-shadow:
+        0 0 10px rgba(184,134,11,.5),
+        0 0 20px rgba(184,134,11,.3);
+
+    border-color:#c99716;
+}
+@media (max-width:768px{
+    .hero-books{
+        display:flex;
+        over-flow-x:auto;
+        gap:15px;
+
+        scroll-snap
+    }
+})
+
+.hero-books{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.hero-books img{
+
+    width:100%;
+    max-width:300px;
+    height:auto;
+
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    transition:.3s;
+}
+.hero-books img:hover,
+.capa:hover{
+    box-shadow:
+        0 0 15px rgba(184,134,11,.35),
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.hero-books img:hover{ transform:translateY(-10px) scale(1.05); }
+
+.hero-books img:nth-child(2){
+    transform:translateY(-30px);
+}
+
+.hero-books img:nth-child(2):hover{
+    transform:translateY(-40px) scale(1.05);;
+}
+.hero-buttons {
+    margin-bottom:30px;
+    font-size:1.1rem;
+    line-height:1.6;
+}
+
+.hero-horarios{
+
+    position:absolute;
+
+    bottom:30px;
+    left:8%;
+
+    color:#b8860b;
+
+    font-family:'Cinzel', serif;
+
+    padding:10px 15px;
+
+}
+
+/* LIVROS */
+
+.livros{
+    padding:80px 8%;
+    background:#f5f0e8;
+}
+
+.livros h1{
+    text-align:left;
+    text-decoration:underline;
+    margin-bottom:50px;
+    color:#1c3050;
+    font-family:'Cinzel', serif;
+}
+
+.livros a{
+    display:flex;
+    justify-content:space-between;
+    align-items:right;
+
+    margin-bottom:40px;
+}
+
+.livros-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.livros-header h1{
+    color:#1c3050;
+    font-family:'Cinzel', serif;
+    border-bottom:3px solid #b8860b;
+    padding-bottom:8px;
+
+}
+/* O Botão do Acesse para mais (Fundo)*/
+.btn-ver-mais{ 
+    text-decoration:none;
+
+    background:#1c3050;
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+/* O Botão do Acesse para mais (Animação de Fundo, quando a seta do Mouse passa por cima)*/
+.btn-ver-mais:hover{
+    background:#b8860b;
+    transform:translateY(-2px);
+}
+.livros-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.livro{
+    background:#faf8f2;
+    border-radius:12px;
+    overflow:hidden;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.livro:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+      0 10px 20px rgba(0,0,0,.12);
+}
+
+.livro p{
+    padding:0 20px; 
+}
+
+.capa{
+    width:100%;
+    height:250px;
+
+    margin:0;
+    border:none;
+    border-radius:0;
+
+    overflow:hidden;
+
+    display:inline-block;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1c3050,
+        #304d7a
+    );
+
+    margin-bottom:15px;
+
+    transition:.3s;
+}
+
+.capa img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+/* DESTAQUES */
+
+.Categorias-destaques{
+    padding:80px 8%;
+    background:#f5f0e8;
+    
+}
+
+.Categorias-destaques{
+    
+    transform:translateY(-5px);
+
+    box-shadow:
+      0 10px 20px rgba(0,0,0,.12);
+}
+
+.Categorias-destaques h1{
+    color:#1c3050;
+    font-family:'Cinzel', serif;
+    text-decoration:underline;
+    border-bottom:3px solid #b8860b;
+    padding-bottom:8px;
+}
+
+.Categorias-destaques a{
+    display:flex;
+    justify-content:space-between;
+    align-items:right;
+
+    margin-bottom:40px;
+}
+.Categorias-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#faf8f2;
+    padding:30px;
+    border-radius:10px;
+    border:1px solid rgba(184,134,11,.15);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+/* FOOTER */
+
+footer{
+    background:#1c3050;
+    color:white;
+    text-align:Left;
+    padding:40px;
+}
+
+footer h3{
+    font-family:'Cinzel', serif;
+    color:#b8860b;
+}
+
+footer span{
+    display:block;
+    margin-top:10px;
+    opacity:.7;
+}
